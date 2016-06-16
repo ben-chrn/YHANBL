@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.5" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="400" id="iN0-l3-epB" customClass="CustomOverlayView" customModule="YHANBL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="400" translatesAutoresizingMaskIntoConstraints="NO" id="Owq-dr-v8g">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="8xc-f5-MJn"/>
+                        <constraint firstAttribute="width" constant="300" id="Iwr-QF-zOu"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="8xc-f5-MJn"/>
+                            <exclude reference="Iwr-QF-zOu"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Owq-dr-v8g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JRB-Ez-Qhm"/>
+                <constraint firstItem="Owq-dr-v8g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kzh-Bn-0fM"/>
+                <constraint firstAttribute="bottom" secondItem="Owq-dr-v8g" secondAttribute="bottom" id="bMb-Kb-yq8"/>
+                <constraint firstAttribute="trailing" secondItem="Owq-dr-v8g" secondAttribute="trailing" id="cJS-dY-zFb"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="overlayImageView" destination="Owq-dr-v8g" id="6EK-y6-AyO"/>
+            </connections>
+        </view>
+    </objects>
+</document>
